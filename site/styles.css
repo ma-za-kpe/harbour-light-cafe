@@ -1,10 +1,122 @@
-:root { color-scheme: light dark; --ink: #1a1a1a; --paper: #fdfdfb; --accent: #8a4b14; }
-@media (prefers-color-scheme: dark) { :root { --ink: #f2f2ee; --paper: #161616; --accent: #f0b070; } }
-* { box-sizing: border-box; }
-body { margin: 0; font: 1.0625rem/1.6 system-ui, sans-serif; color: var(--ink); background: var(--paper); }
-header, main, footer { max-width: 60rem; margin: 0 auto; padding: 1.5rem 1rem; }
-.skip { position: absolute; left: -999px; }
-.skip:focus { left: 1rem; top: 1rem; background: var(--paper); padding: 0.5rem; }
-a { color: var(--accent); }
-:focus-visible { outline: 3px solid var(--accent); outline-offset: 2px; }
-@media (prefers-reduced-motion: reduce) { * { animation: none !important; transition: none !important; } }
+/* Harbour Light Café – landing page stylesheet */
+
+:root {
+  --bg: #f4f1ea;
+  --ink: #2b2b2b;
+  --muted: #6b6b6b;
+  --accent: #1f6f8b;
+  --accent-soft: #d7e8ee;
+  --card: #ffffff;
+  --line: #e0dcd2;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Georgia, 'Times New Roman', serif;
+  color: var(--ink);
+  background-color: var(--bg);
+  line-height: 1.6;
+}
+
+header {
+  background-color: var(--accent);
+  color: #ffffff;
+  text-align: center;
+  padding: 3rem 1.25rem 2.5rem;
+}
+
+h1 {
+  margin: 0 0 0.75rem;
+  font-size: 2.5rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+.tagline {
+  max-width: 34rem;
+  margin: 0 auto;
+  font-size: 1.1rem;
+  color: var(--accent-soft);
+}
+
+main {
+  max-width: 60rem;
+  margin: 0 auto;
+  padding: 2rem 1.25rem 3rem;
+}
+
+section {
+  background-color: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  padding: 1.75rem 1.5rem;
+  margin-bottom: 1.75rem;
+}
+
+h2 {
+  margin-top: 0;
+  font-size: 1.6rem;
+  color: var(--accent);
+  border-bottom: 2px solid var(--accent-soft);
+  padding-bottom: 0.5rem;
+}
+
+.menu-list {
+  list-style: none;
+  margin: 1.25rem 0 0;
+  padding: 0;
+}
+
+.menu-list li {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 1rem;
+  padding: 0.65rem 0;
+  border-bottom: 1px dashed var(--line);
+}
+
+.menu-list li:last-child {
+  border-bottom: none;
+}
+
+.dish {
+  font-size: 1.05rem;
+}
+
+.price {
+  font-weight: 700;
+  color: var(--accent);
+  white-space: nowrap;
+}
+
+address {
+  font-style: normal;
+  margin-top: 0.5rem;
+}
+
+address p {
+  margin: 0.25rem 0;
+}
+
+footer {
+  background-color: var(--accent);
+  color: #ffffff;
+  text-align: center;
+  padding: 1.25rem 1rem;
+  font-size: 0.95rem;
+}
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 2rem;
+  }
+
+  section {
+    padding: 1.25rem 1rem;
+  }
+}
